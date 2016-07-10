@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageViewController" customModule="GLO" customModuleProvider="target">
             <connections>
                 <outlet property="currentOuting" destination="54u-CA-zrh" id="wkJ-n1-CKD"/>
-                <outlet property="posseTableController" destination="IeL-5I-kl1" id="nYp-bQ-D4g"/>
+                <outlet property="posseTableview" destination="Ag2-xU-cGS" id="EXl-da-aUQ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yas-HV-qp4"/>
             </connections>
         </placeholder>
@@ -130,8 +130,8 @@
                     <rect key="frame" x="0.0" y="428" width="375" height="224"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="IeL-5I-kl1" id="RL6-q0-p8O"/>
-                        <outlet property="delegate" destination="IeL-5I-kl1" id="Lgg-Mm-Sd6"/>
+                        <outlet property="dataSource" destination="-1" id="4WG-3b-x9c"/>
+                        <outlet property="delegate" destination="-1" id="XDH-c3-Ue9"/>
                     </connections>
                 </tableView>
             </subviews>
@@ -157,13 +157,7 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
             </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="414.5" y="602.5"/>
         </view>
-        <tableViewController id="IeL-5I-kl1" customClass="PosseTableViewController" customModule="GLO" customModuleProvider="target">
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <connections>
-                <outlet property="view" destination="Ag2-xU-cGS" id="ZR2-i1-5Oz"/>
-            </connections>
-            <point key="canvasLocation" x="936.5" y="602.5"/>
-        </tableViewController>
     </objects>
 </document>

@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
-class HomePageViewController: UIViewController {
+class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let data = ["zip", "bop", "wee"]
     
     @IBOutlet weak var currentOuting: UIButton!
     
-    @IBOutlet var posseTableController: PosseTableViewController!
-    
-    
-    
+    @IBOutlet weak var posseTableview: UITableView!
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -32,7 +31,35 @@ class HomePageViewController: UIViewController {
         print("View did load homebase")
     }
     
+    // MARK: - Table view data source
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return data.count
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("possecell") as? PosseTableViewCell
+        
+        if (cell == nil) {
+            let nib:NSArray = NSBundle.mainBundle().loadNibNamed("PosseTableViewCell", owner:self, options:nil)
+            cell = nib.objectAtIndex(0) as? PosseTableViewCell
+        }
+        
+        cell!.textLabel?.text = data[indexPath.row]
+        
+        print("in cellforrowatindexpath")
+        
+        return cell!
+    }
     
     //MARK: IBACTIONS
     @IBAction func createOutingButton(sender: AnyObject) {

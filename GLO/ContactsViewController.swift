@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController {
+class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let data = ["Jane", "Dick", "Larry"]
+    
+    @IBOutlet weak var contactsTableview: UITableView!
+    
+    
     init(){
         super.init(nibName: nil, bundle: nil)
         
@@ -32,6 +37,42 @@ class ContactsViewController: UIViewController {
         
         
     }
+    
+    //MARK: DELEGATE METHODS
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return data.count
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("contactcell") as? ContactsTableViewCell
+        
+        if (cell == nil) {
+            let nib:NSArray = NSBundle.mainBundle().loadNibNamed("ContactsTableViewCell", owner:self, options:nil)
+            cell = nib.objectAtIndex(0) as? ContactsTableViewCell
+        }
+        
+        cell!.textLabel?.text = data[indexPath.row]
+        
+        print("in cellforrowatindexpath - contacts")
+        
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        data[indexPath.row]
+        
+    }
+    
     
     
     
