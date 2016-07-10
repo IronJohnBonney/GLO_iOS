@@ -11,7 +11,7 @@ import UIKit
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let data = ["zip", "bop", "wee"]
+    let data = ["Girls night, no boys!", "Wu Tang Clan", "Magic Mike n' Martinis"]
     
     @IBOutlet weak var currentOuting: UIButton!
     
@@ -55,6 +55,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         cell!.textLabel?.text = data[indexPath.row]
+        cell?.textLabel?.textAlignment = .Center
         
         print("in cellforrowatindexpath")
         
@@ -80,6 +81,13 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    @IBAction func presentCurrentVC(sender: AnyObject) {
+        
+        let covc = CurrentOutingViewController.init()
+        
+        self.presentViewController(covc, animated: true, completion: nil)
+        
+    }
     
     @IBAction func currentOutingButton(sender: AnyObject) {
         
