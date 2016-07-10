@@ -53,6 +53,11 @@ class HomePageViewController: UIViewController {
         
         print("create possee button pressed")
         
+        let pnvc = PosseNameViewController.init()
+        let navController = UINavigationController(rootViewController: pnvc)
+        
+        self.presentViewController(navController, animated: true, completion: nil)
+        
     }
     
 
