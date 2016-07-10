@@ -27,6 +27,8 @@
 		E213CBC11D31DAB800BFCF3E /* OutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213CBBF1D31DAB800BFCF3E /* OutingViewController.swift */; };
 		E213CBC21D31DAB800BFCF3E /* OutingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E213CBC01D31DAB800BFCF3E /* OutingView.xib */; };
 		E213CBC41D31DF8700BFCF3E /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E213CBC31D31DF8700BFCF3E /* LoginStoryboard.storyboard */; };
+		E213CBC61D31EBC600BFCF3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213CBC51D31EBC600BFCF3E /* LoginController.swift */; };
+		E213CBC81D31EC5E00BFCF3E /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213CBC71D31EC5E00BFCF3E /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		E213CBBF1D31DAB800BFCF3E /* OutingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutingViewController.swift; sourceTree = "<group>"; };
 		E213CBC01D31DAB800BFCF3E /* OutingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutingView.xib; sourceTree = "<group>"; };
 		E213CBC31D31DF8700BFCF3E /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		E213CBC51D31EBC600BFCF3E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E213CBC71D31EC5E00BFCF3E /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E89FA7F73D9CB9CB70BAF800 /* Pods-GLOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLOUITests/Pods-GLOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EA98D2B257492F402F839C2B /* Pods-GLO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLO.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLO/Pods-GLO.release.xcconfig"; sourceTree = "<group>"; };
 		F02A22EFA54D5400CDA69F4A /* Pods_GLOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +172,8 @@
 				E213CB771D31955B00BFCF3E /* HomePageViewController.swift */,
 				E213CB751D31952E00BFCF3E /* HomePageView.xib */,
 				E213CBBF1D31DAB800BFCF3E /* OutingViewController.swift */,
+				E213CBC51D31EBC600BFCF3E /* LoginController.swift */,
+				E213CBC71D31EC5E00BFCF3E /* SignUpController.swift */,
 				E213CBC01D31DAB800BFCF3E /* OutingView.xib */,
 				E213CB4E1D318C8700BFCF3E /* Assets.xcassets */,
 				E213CB501D318C8700BFCF3E /* LaunchScreen.storyboard */,
@@ -464,6 +470,8 @@
 			files = (
 				6D1B79391D31BC7F00485280 /* PosseTableViewCell.swift in Sources */,
 				6DF37A551D3200FC001CB513 /* ContactsViewController.swift in Sources */,
+				E213CBC61D31EBC600BFCF3E /* LoginController.swift in Sources */,
+				E213CBC81D31EC5E00BFCF3E /* SignUpController.swift in Sources */,
 				E213CBC11D31DAB800BFCF3E /* OutingViewController.swift in Sources */,
 				6DF37A511D31EC0E001CB513 /* PosseNameViewController.swift in Sources */,
 				E213CB781D31955B00BFCF3E /* HomePageViewController.swift in Sources */,
