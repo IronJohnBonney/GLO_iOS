@@ -25,6 +25,11 @@ class OutingViewController:UIViewController {
     }
 
     
+    @IBAction func closeButtonPressed(sender: AnyObject) {
+        print("close button pressed in OVC")
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
