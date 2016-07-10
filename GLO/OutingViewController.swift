@@ -13,7 +13,7 @@ import SocketIOClientSwift
 class OutingViewController:UIViewController {
     
     ////// Testing out Socket.io
-    let socket = SocketIOClient(socketURL: NSURL(string: "https://damp-dawn-98481.herokuapp.com")!, options: [.Log(true), .ForcePolling(true)])
+    let socket = SocketIOClient(socketURL: NSURL(string: "https://pure-caverns-99011.herokuapp.com")!, options: [.Log(true), .ForcePolling(true)])
     
     init() {
         super.init(nibName: nil, bundle: nil)
