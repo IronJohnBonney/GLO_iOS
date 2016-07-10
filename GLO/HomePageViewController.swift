@@ -66,6 +66,17 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
         print("create outing button pressed")
         
+        let covc = CreateOutingViewController.init()
+        covc.dismissBlock = { () -> Void in
+            print("inside create outing dismiss block")
+            // Add in more goodies here
+            // TODO: Init a nav controller add outing view, push onto stack
+            let ovc = OutingViewController.init()
+            self.presentViewController(ovc, animated: true, completion: nil)
+            
+        }
+        self.presentViewController(covc, animated: true, completion: nil)
+        
         
     }
     
