@@ -10,7 +10,9 @@ import UIKit
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let data = ["Jane", "Dick", "Larry"]
+    let data = ["Jane", "Dick", "Larry", "Bob", "Joe", "Grace"]
+    
+    //var selectedIndexPaths = [Int]()
     
     @IBOutlet weak var contactsTableview: UITableView!
     
@@ -35,6 +37,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.contactsTableview.allowsMultipleSelection = true
         
     }
     
@@ -62,23 +65,49 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell!.textLabel?.text = data[indexPath.row]
         
-        print("in cellforrowatindexpath - contacts")
+        cell?.selectionStyle = .None
         
         return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        data[indexPath.row]
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
+//        selectedIndexPaths.append(indexPath.row)
+//        
+//        print("did select: \(selectedIndexPaths)")
         
     }
     
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
+        
+//        if indexPath.row == 0 {
+//            
+//            selectedIndexPaths.removeAtIndex(indexPath.row)
+//            
+//        } else {
+//            
+//            selectedIndexPaths.removeAtIndex(indexPath.row-1)
+//            
+//        }
+//        
+//        
+//        
+//        print("did DEselect: \(selectedIndexPaths)")
+        
+        
+    }
     
     
     
     //MARK: BUTTON ACTION METHODS
     
     func doneButton(){
+        
+        //TODO: Grab selected cells and append to a posse on Home Page View
         
         self.dismissViewControllerAnimated(true) { 
             print("done button pressed")
