@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="69N-ZR-mNu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="hHy-gE-JeN">
             <objects>
-                <viewController id="69N-ZR-mNu" sceneMemberID="viewController">
+                <viewController id="69N-ZR-mNu" customClass="LoginController" customModule="GLO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCU-xg-SUE"/>
                         <viewControllerLayoutGuide type="bottom" id="Dnw-ub-2ey"/>
@@ -46,12 +46,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="1" green="0.67534436681842103" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9a-0K-3J4">
-                                <rect key="frame" x="108" y="581" width="158" height="30"/>
-                                <state key="normal" title="Forgot Your Password?">
-                                    <color key="titleColor" red="0.74043996710000004" green="0.49151932570000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="69N-ZR-mNu" eventType="touchUpInside" id="2a7-sD-aCe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wib-xF-YJ1">
                                 <rect key="frame" x="118" y="415" width="139" height="34"/>
@@ -64,19 +61,45 @@
                                     <segue destination="dFB-xw-PuR" kind="show" id="gOl-sw-KxA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9a-0K-3J4">
+                                <rect key="frame" x="108" y="581" width="158" height="30"/>
+                                <state key="normal" title="Forgot Your Password?">
+                                    <color key="titleColor" red="0.74043996710000004" green="0.49151932570000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordPressed:" destination="69N-ZR-mNu" eventType="touchUpInside" id="1Jn-qV-2pv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32K-wO-sIX">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.74043996710000004" green="0.49151932570000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="69N-ZR-mNu" eventType="touchUpInside" id="9Fg-af-UrK"/>
+                                    <action selector="dismissButtonPressed:" destination="dFB-xw-PuR" eventType="touchUpInside" id="Mbz-7z-3Mq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginButton" destination="l46-CK-R8R" id="1TX-ga-04s"/>
+                        <outlet property="passwordTextField" destination="PZA-Cy-c66" id="82O-Nj-MW9"/>
+                        <outlet property="signUpButton" destination="wib-xF-YJ1" id="TJL-UA-hgL"/>
+                        <outlet property="usernameTextField" destination="Jn1-Ia-mqI" id="HR5-Pc-oYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03M-cd-Ycf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252.5" y="263.5"/>
+            <point key="canvasLocation" x="249.5" y="263.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Controller-->
         <scene sceneID="3W3-7A-JBk">
             <objects>
-                <viewController id="dFB-xw-PuR" sceneMemberID="viewController">
+                <viewController id="dFB-xw-PuR" customClass="SignUpController" customModule="GLO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceb-m0-wg9"/>
                         <viewControllerLayoutGuide type="bottom" id="VBV-2p-AKB"/>
@@ -124,16 +147,37 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.67534436679999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="dFB-xw-PuR" eventType="touchUpInside" id="faa-Nt-Agg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drunk Pin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1D-LB-GGk">
                                 <rect key="frame" x="20" y="390" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9s-4d-dBM">
+                                <rect key="frame" x="12" y="20" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.74043996710000004" green="0.49151932570000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="dFB-xw-PuR" eventType="touchUpInside" id="r55-Eo-3yt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="drunkPinTextField" destination="c1D-LB-GGk" id="eZf-em-kRM"/>
+                        <outlet property="emailTextField" destination="4Km-XU-tHG" id="JMe-4S-bRA"/>
+                        <outlet property="passwordTextField" destination="MaZ-nS-Hey" id="xMt-kc-C0O"/>
+                        <outlet property="reenterPasswordTextField" destination="gBA-2J-S1O" id="Ie6-Dg-O2U"/>
+                        <outlet property="signUpButton" destination="70J-je-Apl" id="DKR-kP-Jr6"/>
+                        <outlet property="userNameTextField" destination="gOh-mx-Q96" id="njv-lZ-ZCk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpP-hY-x8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

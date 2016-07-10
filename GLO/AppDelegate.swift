@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("app did finish launching with options")
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         
+        
+        Parse.initializeWithConfiguration(ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+            configuration.server = "https://pure-caverns-99011.herokuapp.com/parse/" // '/' important after 'parse'
+            configuration.applicationId = "3DSGLOBALROUNDUP"
+        }))
+        
+        
+        
+        
         // TODO: Need to initialize view controller above and then set one as the root view controller as below
         
         let hpvc = HomePageViewController.init()
@@ -28,6 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.makeKeyAndVisible()
         
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            print("Houston we have a user")
+        } else {
+            print("present the login!")
+            let storyboard = UIStoryboard.init(name: "LoginStoryboard", bundle: nil)
+            self.window?.rootViewController?.presentViewController(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
+        }
         
         return true
     }
